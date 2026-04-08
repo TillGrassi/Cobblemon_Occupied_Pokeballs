@@ -1,0 +1,19 @@
+# Build output
+build/
+out/
+
+# Gradle
+.gradle/
+# gradle-wrapper.jar should NOT be ignored — it's needed to bootstrap the build
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Java heap dumps
+*.hprof
+
+# OS
+.DS_Store
+Thumbs.db

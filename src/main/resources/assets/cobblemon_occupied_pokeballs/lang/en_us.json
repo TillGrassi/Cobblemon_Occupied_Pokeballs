@@ -1,0 +1,15 @@
+{
+  "key.cobblemon_occupied_pokeballs.eject_ball": "Eject / Reclaim Pokémon Ball",
+  "key.category.cobblemon_occupied_pokeballs":   "Cobblemon Occupied Pokéballs",
+
+  "cobblemon_occupied_pokeballs.msg.reclaimed_party": "%s was added to your party!",
+  "cobblemon_occupied_pokeballs.msg.reclaimed_pc":    "%s was sent to your PC (party was full).",
+  "cobblemon_occupied_pokeballs.msg.pc_full":         "Your PC is also full! Could not reclaim %s.",
+  "cobblemon_occupied_pokeballs.msg.corrupt":         "This ball's data appears to be corrupt!",
+  "cobblemon_occupied_pokeballs.msg.pokemon_out":     "That Pokémon is outside its ball!",
+
+  "config.cobblemon_occupied_pokeballs.title":                       "Cobblemon Occupied Pokéballs Config",
+  "config.cobblemon_occupied_pokeballs.category.general":            "General",
+  "config.cobblemon_occupied_pokeballs.drop_party_on_death":         "Drop Party on Death",
+  "config.cobblemon_occupied_pokeballs.drop_party_on_death.tooltip": "When enabled, party Pokémon drop as ball items when you die. Respects the keepInventory gamerule."
+}
