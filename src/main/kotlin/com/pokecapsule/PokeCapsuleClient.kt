@@ -1,10 +1,13 @@
 package com.pokecapsule
 
 import com.cobblemon.mod.common.item.PokeBallItem
+import com.pokecapsule.block.ModBlocks
+import com.pokecapsule.block.PlacedBallBlockEntityRenderer
 import com.pokecapsule.event.KeyBindings
 import com.pokecapsule.util.BallNbt
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories
 import net.minecraft.text.Text
 import net.minecraft.util.Formatting
 
@@ -12,6 +15,7 @@ object PokeCapsuleClient : ClientModInitializer {
 
     override fun onInitializeClient() {
         KeyBindings.register()
+        BlockEntityRendererFactories.register(ModBlocks.PLACED_BALL_ENTITY_TYPE, ::PlacedBallBlockEntityRenderer)
         registerTooltip()
     }
 
@@ -34,11 +38,7 @@ object PokeCapsuleClient : ClientModInitializer {
 
             val typeStr = if (type2.isEmpty()) type1 else "$type1 / $type2"
             lines.add(Text.literal(typeStr).formatted(Formatting.GRAY))
-            lines.add(
-                Text.translatable(nature)
-                    .append(Text.literal(" Nature"))
-                    .formatted(Formatting.GRAY)
-            )
+            lines.add(Text.literal("$nature Nature").formatted(Formatting.GRAY))
             if (gender.isNotEmpty()) {
                 lines.add(Text.literal(gender).formatted(Formatting.GRAY))
             }

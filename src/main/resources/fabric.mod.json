@@ -4,14 +4,15 @@
   "version": "${version}",
   "name": "Cobblemon Occupied Pokéballs",
   "description": "Eject your focused Pokémon as its physical Poké Ball item. Press the same key to reclaim it.",
-  "authors": ["Hugh Renzone"],
+  "authors": ["M3Till"],
   "contact": {},
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "main":   [{"adapter": "kotlin", "value": "com.pokecapsule.PokeCapsuleMod"}],
     "client": [{"adapter": "kotlin", "value": "com.pokecapsule.PokeCapsuleClient"}],
-    "modmenu": [{"adapter": "kotlin", "value": "com.pokecapsule.config.ModMenuIntegration"}]
+    "modmenu": [{"adapter": "kotlin", "value": "com.pokecapsule.config.ModMenuIntegration"}],
+    "jade":    [{"adapter": "kotlin", "value": "com.pokecapsule.jade.JadePlugin"}]
   },
   "mixins": [
     "cobblemon_occupied_pokeballs.mixins.json"
@@ -25,6 +26,7 @@
   },
   "suggests": {
     "modmenu":      "*",
-    "cloth-config2":"*"
+    "cloth-config2":"*",
+    "jade":         "*"
   }
 }

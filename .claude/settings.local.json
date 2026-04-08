@@ -48,7 +48,10 @@
       "Bash(jar -xf \"E:\\\\Downloads\\\\pokecapsule-mod \\(2\\)\\\\pokecapsule/.gradle/loom-cache/remapped_mods/remapped/curse/maven/cobblemon-687131-652de5e3/7273170/cobblemon-687131-652de5e3-7273170.jar\" com/cobblemon/mod/common/util/codec/internal/ClientPokemonP2.class)",
       "Bash(javap -p \"com/cobblemon/mod/common/util/codec/internal/ClientPokemonP2.class\")",
       "Bash(jar -xf \"E:\\\\Downloads\\\\pokecapsule-mod \\(2\\)\\\\pokecapsule/.gradle/loom-cache/remapped_mods/remapped/curse/maven/cobblemon-687131-652de5e3/7273170/cobblemon-687131-652de5e3-7273170.jar\" com/cobblemon/mod/common/util/codec/internal/ClientPokemonP3.class)",
-      "Bash(javap -p \"com/cobblemon/mod/common/util/codec/internal/ClientPokemonP3.class\")"
+      "Bash(javap -p \"com/cobblemon/mod/common/util/codec/internal/ClientPokemonP3.class\")",
+      "Bash(javap -classpath \"E:/Downloads/pokecapsule-mod \\(2\\)/pokecapsule/.gradle/loom-cache/minecraftMaven/net/minecraft/minecraft-merged-5714bb25f0/1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2/minecraft-merged-5714bb25f0-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar\" net.minecraft.client.render.block.entity.BlockEntityRendererFactories)",
+      "Bash(javap -p -classpath 'E:/Downloads/pokecapsule-mod \\(2\\)/pokecapsule/.gradle/loom-cache/remapped_mods/remapped/curse/maven/cobblemon-687131-652de5e3/7273170/cobblemon-687131-652de5e3-7273170.jar' com.cobblemon.mod.common.client.render.pokeball.PokeBallRenderer)",
+      "Bash(javap -p -classpath 'E:/Downloads/pokecapsule-mod \\(2\\)/pokecapsule/.gradle/loom-cache/remapped_mods/remapped/curse/maven/cobblemon-687131-652de5e3/7273170/cobblemon-687131-652de5e3-7273170.jar' com.cobblemon.mod.common.client.render.models.blockbench.pokeball.PosablePokeBallModel)"
     ]
   }
 }

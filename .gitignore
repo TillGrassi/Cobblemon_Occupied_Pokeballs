@@ -14,6 +14,12 @@ out/
 # Java heap dumps
 *.hprof
 
+# Local compile-only jars (e.g. Jade) — not committed, place manually in libs/
+libs/*.jar
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Changelog
+CHANGELOG.md

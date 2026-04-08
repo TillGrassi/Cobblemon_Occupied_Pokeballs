@@ -11,6 +11,10 @@ import net.minecraft.client.option.KeyBinding
 import net.minecraft.client.util.InputUtil
 import org.lwjgl.glfw.GLFW
 
+private fun isShiftDown(handle: Long) =
+    InputUtil.isKeyPressed(handle, GLFW.GLFW_KEY_LEFT_SHIFT) ||
+    InputUtil.isKeyPressed(handle, GLFW.GLFW_KEY_RIGHT_SHIFT)
+
 object KeyBindings {
 
     lateinit var ejectBall: KeyBinding
@@ -30,15 +34,22 @@ object KeyBindings {
             while (ejectBall.wasPressed()) {
                 if (client.player == null) continue
 
-                val heldStack = client.player!!.mainHandStack
+                val heldStack   = client.player!!.mainHandStack
+                val shiftHeld   = isShiftDown(client.window.handle)
+                val holdingBall = heldStack.item is PokeBallItem && BallNbt.hasPokemon(heldStack)
 
-                if (heldStack.item is PokeBallItem && BallNbt.hasPokemon(heldStack)) {
-                    // Holding a ball with a Pokémon inside → reclaim it
-                    ClientPlayNetworking.send(ReclaimBallPayload)
-                } else {
-                    // Eject the Pokémon highlighted in the Cobblemon party overlay
-                    val selectedSlot = CobblemonClient.storage.selectedSlot
-                    ClientPlayNetworking.send(EjectBallPayload(selectedSlot))
+                when {
+                    // Shift+T with occupied ball in hand → add to party and send out immediately
+                    shiftHeld && holdingBall -> ClientPlayNetworking.send(SendOutFromHandPayload)
+
+                    // T with occupied ball in hand → reclaim into party/PC
+                    holdingBall -> ClientPlayNetworking.send(ReclaimBallPayload)
+
+                    // T with no ball (or empty ball) → eject the selected party Pokémon
+                    else -> {
+                        val selectedSlot = CobblemonClient.storage.selectedSlot
+                        ClientPlayNetworking.send(EjectBallPayload(selectedSlot))
+                    }
                 }
             }
         }

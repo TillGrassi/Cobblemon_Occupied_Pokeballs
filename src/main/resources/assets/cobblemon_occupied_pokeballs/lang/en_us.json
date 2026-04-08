@@ -5,8 +5,11 @@
   "cobblemon_occupied_pokeballs.msg.reclaimed_party": "%s was added to your party!",
   "cobblemon_occupied_pokeballs.msg.reclaimed_pc":    "%s was sent to your PC (party was full).",
   "cobblemon_occupied_pokeballs.msg.pc_full":         "Your PC is also full! Could not reclaim %s.",
+  "cobblemon_occupied_pokeballs.msg.party_full":      "Your party is full!",
   "cobblemon_occupied_pokeballs.msg.corrupt":         "This ball's data appears to be corrupt!",
   "cobblemon_occupied_pokeballs.msg.pokemon_out":     "That Pokémon is outside its ball!",
+
+  "block.cobblemon_occupied_pokeballs.placed_ball": "Pokéball Display",
 
   "config.cobblemon_occupied_pokeballs.title":                       "Cobblemon Occupied Pokéballs Config",
   "config.cobblemon_occupied_pokeballs.category.general":            "General",

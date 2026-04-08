@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "particle": "cobblemon_occupied_pokeballs:block/empty",
+    "all":      "cobblemon_occupied_pokeballs:block/empty"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "cobblemon_occupied_pokeballs:block/placed_ball" }
+  }
+}
