@@ -24,6 +24,18 @@ class ModMenuIntegration : ModMenuApi {
         category.addEntry(
             builder.entryBuilder()
                 .startBooleanToggle(
+                    Text.translatable("config.cobblemon_occupied_pokeballs.show_floating_name"),
+                    PokeCapsuleConfig.showFloatingName
+                )
+                .setDefaultValue(true)
+                .setTooltip(Text.translatable("config.cobblemon_occupied_pokeballs.show_floating_name.tooltip"))
+                .setSaveConsumer { PokeCapsuleConfig.showFloatingName = it }
+                .build()
+        )
+
+        category.addEntry(
+            builder.entryBuilder()
+                .startBooleanToggle(
                     Text.translatable("config.cobblemon_occupied_pokeballs.drop_party_on_death"),
                     PokeCapsuleConfig.dropPartyOnDeath
                 )

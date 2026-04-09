@@ -13,6 +13,8 @@
 
   "config.cobblemon_occupied_pokeballs.title":                       "Cobblemon Occupied Pokéballs Config",
   "config.cobblemon_occupied_pokeballs.category.general":            "General",
+  "config.cobblemon_occupied_pokeballs.show_floating_name":          "Show Names of Placed Pokéballs",
+  "config.cobblemon_occupied_pokeballs.show_floating_name.tooltip":  "Show the Pokémon's name, level, and shiny marker as a floating label above placed Pokéball Displays.",
   "config.cobblemon_occupied_pokeballs.drop_party_on_death":         "Drop Party on Death",
   "config.cobblemon_occupied_pokeballs.drop_party_on_death.tooltip": "When enabled, party Pokémon drop as ball items when you die. Respects the keepInventory gamerule."
 }

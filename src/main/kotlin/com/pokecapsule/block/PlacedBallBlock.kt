@@ -15,8 +15,8 @@ class PlacedBallBlock(settings: Settings) : BlockWithEntity(settings) {
     companion object {
         val CODEC: MapCodec<PlacedBallBlock> = createCodec(::PlacedBallBlock)
 
-        // 10×10×10 px centred, sitting flush on the ground — same proportions as a skull
-        val SHAPE: VoxelShape = createCuboidShape(3.0, 0.0, 3.0, 13.0, 10.0, 13.0)
+        // 10×10×8 px centred, sitting flush on the ground
+        val SHAPE: VoxelShape = createCuboidShape(3.0, 0.0, 3.0, 13.0, 8.0, 13.0)
     }
 
     override fun getCodec(): MapCodec<out BlockWithEntity> = CODEC

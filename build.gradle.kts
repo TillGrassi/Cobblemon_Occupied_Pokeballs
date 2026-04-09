@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "2.3.20"
 }
 
-version = "1.1.0"
+version = "1.2.0"
 group = "com.pokecapsule"
 
 base {

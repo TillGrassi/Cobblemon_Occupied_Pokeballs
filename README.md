@@ -12,6 +12,7 @@ Eject any party Pokémon as its physical Poké Ball item, hand it to a friend, s
 - **Reclaim** — hold the ball and press **T** to add it back to your party (or PC if full)
 - **Send out from hand** — hold the ball and press **Shift+T** to add it to your party and immediately send it out with the full throw animation (only works if your party has space)
 - **Pokéball Display** — right-click the top face of any solid block while holding an occupied ball to place it as a 3D display; reclaim by breaking it
+- **Floating name label** — placed displays show the Pokémon's name (and ✦ if shiny) as a floating label; toggleable in config
 - **Jade tooltip** — when looking at a placed ball, Jade shows the Pokémon's name, level, type(s), nature, and shiny status
 - **Ball throwing blocked** — occupied balls cannot be thrown; they work only as carriers
 - **Rich item tooltip** — the ball shows the Pokémon's name, level, gender, type(s), nature, and a ✦ Shiny marker when applicable
@@ -60,12 +61,6 @@ For servers: the mod must be installed on **both the server and every client**.
 ## Configuration
 
 The config file is created automatically at `config/cobblemon_occupied_pokeballs.json` on first launch:
-
-```json
-{
-  "dropPartyOnDeath": false
-}
-```
 
 | Option             | Default | Description                                                                      |
 | ------------------ | ------- | -------------------------------------------------------------------------------- |
