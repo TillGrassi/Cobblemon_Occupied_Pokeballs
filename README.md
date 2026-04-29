@@ -15,10 +15,9 @@ Eject any party Pokémon as its physical Poké Ball item, hand it to a friend, s
 - **Floating name label** — placed displays show the Pokémon's name (and ✦ if shiny) as a floating label; toggleable in config
 - **Jade tooltip** — when looking at a placed ball, Jade shows the Pokémon's name, level, type(s), nature, and shiny status
 - **Ball throwing blocked** — occupied balls cannot be thrown; they work only as carriers
-- **Rich item tooltip** — the ball shows the Pokémon's name, level, gender, type(s), nature, and a ✦ Shiny marker when applicable
+- **Item tooltip** — the ball shows the Pokémon's name, level, gender, type(s), nature, and a ✦ Shiny marker when applicable
 - **Original ball preserved** — a Pokémon caught in a Master Ball drops as a Master Ball, etc.
-- **Full data preserved** — IVs, EVs, moves, ability, nature, held item, nickname, marks — everything round-trips perfectly
-- **Trading** — give or chest-transfer the ball to another player; when they reclaim it, the Pokémon is theirs
+- **Full data preserved** — IVs, EVs, moves, ability, nature, held item, nickname, marks
 - **Drop on death** _(optional, off by default)_ — configure via ModMenu to drop party balls as items on death; respects the `keepInventory` gamerule
 
 All keybinds are rebindable under **Options → Controls → Cobblemon Occupied Pokéballs**.
@@ -62,9 +61,17 @@ For servers: the mod must be installed on **both the server and every client**.
 
 The config file is created automatically at `config/cobblemon_occupied_pokeballs.json` on first launch:
 
-| Option             | Default | Description                                                                      |
-| ------------------ | ------- | -------------------------------------------------------------------------------- |
-| `dropPartyOnDeath` | `false` | Drop all party Pokémon as ball items on death. Skipped if `keepInventory` is on. |
+```json
+{
+  "showFloatingName": true,
+  "dropPartyOnDeath": false
+}
+```
+
+| Option             | Default | Description                                                                                  |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------- |
+| `showFloatingName` | `true`  | Show the Pokémon's name (and ✦ if shiny) as a floating label above placed Pokéball Displays. |
+| `dropPartyOnDeath` | `false` | Drop all party Pokémon as ball items on death. Skipped if `keepInventory` is on.             |
 
 If ModMenu and Cloth Config are installed, a **Config** button appears on the mod's entry in the Mods screen.
 
